@@ -45,7 +45,7 @@ export default function Home() {
   const themeColor = 'var(--accent-color)';
   
   // Profile image URL - using a direct Imgur link
-  const profileImageUrl = "https://i.imgur.com/jWr67J8.png";
+  const profileImageUrl = "https://i.imgur.com/FgnUE3X.jpg";
   
   // Sample links - replace with your own
   const links: Link[] = [
