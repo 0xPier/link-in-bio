@@ -47,45 +47,45 @@ export default function Home() {
   const links: Link[] = [
     {
       id: 1,
-      title: 'Portfolio Website',
-      url: 'https://example.com',
-      icon: <FaGlobe className="text-xl" />
+      title: 'Link One',
+      url: 'https://instagram.com/yourusername',
+      icon: <FaInstagram className="text-2xl" />
     },
     {
       id: 2,
-      title: 'GitHub',
+      title: 'Link Two',
       url: 'https://github.com/yourusername',
-      icon: <FaGithub className="text-xl" />
+      icon: <FaGithub className="text-2xl" />
     },
     {
       id: 3,
-      title: 'X (Twitter)',
+      title: 'Link Three',
       url: 'https://x.com/yourusername',
-      icon: <SiX className="text-xl" />
+      icon: <SiX className="text-2xl" />
     },
     {
       id: 4,
-      title: 'LinkedIn',
+      title: 'Link Four',
       url: 'https://linkedin.com/in/yourusername',
-      icon: <FaLinkedin className="text-xl" />
+      icon: <FaLinkedin className="text-2xl" />
     },
     {
       id: 5,
-      title: 'Instagram',
-      url: 'https://instagram.com/yourusername',
-      icon: <FaInstagram className="text-xl" />
+      title: 'Link Five',
+      url: 'https://youtube.com/c/yourusername',
+      icon: <FaYoutube className="text-2xl" />
     },
     {
       id: 6,
-      title: 'YouTube Channel',
-      url: 'https://youtube.com/c/yourusername',
-      icon: <FaYoutube className="text-xl" />
+      title: 'Link Six',
+      url: 'https://example.com',
+      icon: <FaGlobe className="text-2xl" />
     },
     {
       id: 7,
-      title: 'Contact Me',
+      title: 'Link Seven',
       url: 'mailto:your.email@example.com',
-      icon: <FaEnvelope className="text-xl" />
+      icon: <FaEnvelope className="text-2xl" />
     }
   ];
 
@@ -137,6 +137,45 @@ export default function Home() {
         >
           Frontend Developer & Designer | Creating beautiful web experiences
         </motion.p>
+      </motion.div>
+      
+      {/* Social Media Icons */}
+      <motion.div
+        className="flex justify-center gap-4 mb-8"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        <motion.a
+          href="https://instagram.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
+          whileHover={{ scale: 1.1, backgroundColor: '#2D2D2D' }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaInstagram className="text-2xl" />
+        </motion.a>
+        <motion.a
+          href="https://github.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
+          whileHover={{ scale: 1.1, backgroundColor: '#2D2D2D' }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaGithub className="text-2xl" />
+        </motion.a>
+        <motion.a
+          href="https://x.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
+          whileHover={{ scale: 1.1, backgroundColor: '#2D2D2D' }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <SiX className="text-2xl" />
+        </motion.a>
       </motion.div>
       
       {/* Links Section */}
