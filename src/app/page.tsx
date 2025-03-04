@@ -40,60 +40,12 @@ const itemVariants = {
   }
 };
 
-// Custom Avatar Component
-const AnimeAvatar = () => {
-  return (
-    <div className="w-full h-full relative">
-      {/* Background */}
-      <div className="absolute inset-0 bg-[#1A1A1A]"></div>
-      
-      {/* Face */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="w-20 h-20 bg-[#f0d0b0] rounded-full mt-4"></div>
-      </div>
-      
-      {/* Hat */}
-      <div className="absolute top-0 left-0 right-0 flex justify-center">
-        <div className="w-24 h-10 bg-[#333] rounded-t-lg"></div>
-      </div>
-      
-      {/* Hat band */}
-      <div className="absolute top-7 left-0 right-0 flex justify-center">
-        <div className="w-24 h-2 bg-[#c22]"></div>
-      </div>
-      
-      {/* Glasses */}
-      <div className="absolute top-14 left-0 right-0 flex justify-center">
-        <div className="flex items-center">
-          <div className="w-6 h-6 rounded-full border-[1.5px] border-[#333] mr-1"></div>
-          <div className="w-6 h-6 rounded-full border-[1.5px] border-[#333]"></div>
-        </div>
-      </div>
-      
-      {/* Eyebrows */}
-      <div className="absolute top-12 left-0 right-0 flex justify-center">
-        <div className="flex items-center gap-8">
-          <div className="w-4 h-0.5 bg-[#333]"></div>
-          <div className="w-4 h-0.5 bg-[#333]"></div>
-        </div>
-      </div>
-      
-      {/* Mouth */}
-      <div className="absolute top-20 left-0 right-0 flex justify-center">
-        <div className="w-3 h-0.5 bg-[#333]"></div>
-      </div>
-      
-      {/* Shirt */}
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
-        <div className="w-full h-8 bg-[#333]"></div>
-      </div>
-    </div>
-  );
-};
-
 export default function Home() {
   // Fixed theme color - softer green
   const themeColor = 'var(--accent-color)';
+  
+  // Profile image URL - using a direct Imgur link
+  const profileImageUrl = "https://i.imgur.com/jWr67J8.png";
   
   // Sample links - replace with your own
   const links: Link[] = [
@@ -162,8 +114,14 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: 'spring', stiffness: 300, damping: 10 }}
         >
-          {/* Custom anime avatar */}
-          <AnimeAvatar />
+          {/* Profile image from Imgur */}
+          <Image 
+            src={profileImageUrl}
+            alt="Profile Picture"
+            fill
+            className="object-cover"
+            priority
+          />
         </motion.div>
         
         {/* Name and Bio */}
