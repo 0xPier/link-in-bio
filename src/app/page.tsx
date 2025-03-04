@@ -2,6 +2,7 @@
 
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaEnvelope, FaGlobe } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
+import { HiOutlineSparkles, HiOutlineLightBulb, HiOutlineFire, HiOutlineHeart, HiOutlineStar, HiOutlineLightningBolt, HiOutlineCube } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import React from 'react';
@@ -49,43 +50,43 @@ export default function Home() {
       id: 1,
       title: 'Link One',
       url: 'https://instagram.com/yourusername',
-      icon: <FaInstagram className="text-2xl" />
+      icon: <HiOutlineSparkles className="text-2xl" />
     },
     {
       id: 2,
       title: 'Link Two',
       url: 'https://github.com/yourusername',
-      icon: <FaGithub className="text-2xl" />
+      icon: <HiOutlineLightBulb className="text-2xl" />
     },
     {
       id: 3,
       title: 'Link Three',
       url: 'https://x.com/yourusername',
-      icon: <SiX className="text-2xl" />
+      icon: <HiOutlineFire className="text-2xl" />
     },
     {
       id: 4,
       title: 'Link Four',
       url: 'https://linkedin.com/in/yourusername',
-      icon: <FaLinkedin className="text-2xl" />
+      icon: <HiOutlineHeart className="text-2xl" />
     },
     {
       id: 5,
       title: 'Link Five',
       url: 'https://youtube.com/c/yourusername',
-      icon: <FaYoutube className="text-2xl" />
+      icon: <HiOutlineStar className="text-2xl" />
     },
     {
       id: 6,
       title: 'Link Six',
       url: 'https://example.com',
-      icon: <FaGlobe className="text-2xl" />
+      icon: <HiOutlineLightningBolt className="text-2xl" />
     },
     {
       id: 7,
       title: 'Link Seven',
       url: 'mailto:your.email@example.com',
-      icon: <FaEnvelope className="text-2xl" />
+      icon: <HiOutlineCube className="text-2xl" />
     }
   ];
 
@@ -175,6 +176,16 @@ export default function Home() {
           whileTap={{ scale: 0.95 }}
         >
           <SiX className="text-2xl" />
+        </motion.a>
+        <motion.a
+          href="https://youtube.com/c/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
+          whileHover={{ scale: 1.1, backgroundColor: '#2D2D2D' }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaYoutube className="text-2xl" />
         </motion.a>
       </motion.div>
       
