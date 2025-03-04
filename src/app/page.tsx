@@ -1,6 +1,6 @@
 'use client';
 
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaEnvelope, FaGlobe } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
 import { HiOutlineSparkles, HiOutlineLightBulb, HiOutlineFire, HiOutlineHeart, HiOutlineStar, HiOutlineLightningBolt, HiOutlineCube } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
@@ -49,19 +49,19 @@ export default function Home() {
     {
       id: 1,
       title: 'Link One',
-      url: 'https://instagram.com/yourusername',
+      url: 'https://x.com/1kpier',
       icon: <HiOutlineSparkles className="text-2xl" />
     },
     {
       id: 2,
       title: 'Link Two',
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/0xPier',
       icon: <HiOutlineLightBulb className="text-2xl" />
     },
     {
       id: 3,
       title: 'Link Three',
-      url: 'https://x.com/yourusername',
+      url: 'https://youtube.com/c/1kpier',
       icon: <HiOutlineFire className="text-2xl" />
     },
     {
@@ -73,7 +73,7 @@ export default function Home() {
     {
       id: 5,
       title: 'Link Five',
-      url: 'https://youtube.com/c/yourusername',
+      url: 'https://example.com',
       icon: <HiOutlineStar className="text-2xl" />
     },
     {
@@ -89,6 +89,9 @@ export default function Home() {
       icon: <HiOutlineCube className="text-2xl" />
     }
   ];
+
+  // Profile image URL - you'll need to replace this with your actual image URL
+  const profileImageUrl = "https://maker.remilla.org/images/avatar.jpg";
 
   return (
     <main 
@@ -111,9 +114,9 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: 'spring', stiffness: 300, damping: 10 }}
         >
-          {/* Replace with your own image */}
+          {/* Your profile image */}
           <Image 
-            src="https://placehold.co/400x400/1A1A1A/8AE234/png" 
+            src={profileImageUrl}
             alt="Profile Picture"
             fill
             className="object-cover"
@@ -128,15 +131,15 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Your Name
+          1kPier
         </motion.h1>
         <motion.p 
-          className="text-gray-400 mb-6"
+          className="text-gray-400 mb-6 max-w-xs mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          Frontend Developer & Designer | Creating beautiful web experiences
+          Thought is the fire that creates the steam that turns the wheel of fortune, upon which your experiences depend 易
         </motion.p>
       </motion.div>
       
@@ -148,17 +151,7 @@ export default function Home() {
         transition={{ delay: 0.4, duration: 0.5 }}
       >
         <motion.a
-          href="https://instagram.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
-          whileHover={{ scale: 1.1, backgroundColor: '#2D2D2D' }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FaInstagram className="text-2xl" />
-        </motion.a>
-        <motion.a
-          href="https://github.com/yourusername"
+          href="https://github.com/0xPier"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
@@ -168,7 +161,7 @@ export default function Home() {
           <FaGithub className="text-2xl" />
         </motion.a>
         <motion.a
-          href="https://x.com/yourusername"
+          href="https://x.com/1kpier"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
@@ -178,7 +171,7 @@ export default function Home() {
           <SiX className="text-2xl" />
         </motion.a>
         <motion.a
-          href="https://youtube.com/c/yourusername"
+          href="https://youtube.com/c/1kpier"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 rounded-full bg-card text-accent"
@@ -228,7 +221,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
-        <p>© {new Date().getFullYear()} Your Name</p>
+        <p>© {new Date().getFullYear()} 1kPier</p>
         <p className="mt-1">Made with <span className="text-accent">❤️</span></p>
       </motion.footer>
     </main>
